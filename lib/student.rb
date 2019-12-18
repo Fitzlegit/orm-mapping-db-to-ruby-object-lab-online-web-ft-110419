@@ -13,7 +13,7 @@ class Student
   def self.all
     # retrieve all the rows from the "Students" database
     sql = <<-SQL
-      SELECT * FROM Students
+      SELECT * FROM students
     SQL
 
     # remember each row should be a new instance of the Student class
@@ -60,4 +60,8 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
+
+  def self.all_students_in_grade_9
+    
+  
 end
